@@ -10,8 +10,16 @@ html {
     font-family: "Helvitica Neue", Helvetica, arial, sans-serif;
     color: #111;
     padding: 24px 24px 0;
+    -webkit-font-smoothing: antialiased; /*font smoothing voor verschillende browsers, hier chrome, firefox en safari*/
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
 };
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 ::-moz-selection {
     background: #e85e00;
     color: white;
