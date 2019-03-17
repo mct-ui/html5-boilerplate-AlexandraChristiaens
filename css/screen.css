@@ -9,7 +9,7 @@ html {
 
     font-family: "Helvitica Neue", Helvetica, arial, sans-serif;
     color: #111;
-    padding: 24px 24px 0;
+    /*padding: 24px 24px 0;*/
     -webkit-font-smoothing: antialiased; /*font smoothing voor verschillende browsers, hier chrome, firefox en safari*/
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
@@ -90,7 +90,7 @@ margin: 0 0 24px;
 }
 
 ul,
-ol, blockquote {
+ol, .c-quote {
     margin: 0 0 24px;
 
 
@@ -103,7 +103,7 @@ li ol{
     margin-bottom: 0;
 
 }
-blockquote {
+.c-quote {
     font-style: italic;
     font-size: 23px;
     line-height: 32px;
@@ -112,7 +112,7 @@ blockquote {
 
 }
 
-blockquote *{ /* sterselector: alles wat in blokquote zit, moet de fontsize en line-height overerven;*/
+.c-quote *{ /* sterselector: alles wat in blokquote zit, moet de fontsize en line-height overerven;*/
 font-size: inherit;
 line-height: inherit;
 }
@@ -146,7 +146,12 @@ a:hover,
 a:focus {
     color: Crimson;
 }
+/*components article*/
 
+.c-article__header{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /*
     Media Queries
     ---
@@ -167,21 +172,30 @@ a:focus {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    .c-article__header{
+        padding: 48px 48px 24px;
+    }
     h1{
-        font-size: 58px;
-        line-height: 64px;
+        font-size: 46px;
+        line-height: 56px;
     }
-    html{
+    /* html{
         padding: 48px 48px 24px
-    }
+    } */
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
 @media (min-width: 992px) {
-
+    h1{
+        font-size: 52px;
+        line-height: 64px;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+    h1{
+        font-size: 58px;
+        line-height: 72px;
+    }
 }
